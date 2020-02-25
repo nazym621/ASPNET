@@ -41,7 +41,7 @@ namespace ASPNET.Controllers
 
             if(prod == null)
             {
-                return View("Product not found");
+                return View("ProductNotFound");
             }
             return View(prod);
         }
@@ -50,7 +50,7 @@ namespace ASPNET.Controllers
         {
             repo.UpdateProduct(product);
 
-            return RedirectToAction("View Product", new { id = product.ProductID });
+            return RedirectToAction("ViewProduct", new { id = product.ProductID });
         }
 
     }
